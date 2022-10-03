@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useEvent } from "../../context/event/EventContext";
-import "./CreatePage.css";
+import "./CreateEventPage.css";
 
-const CreatePage = () => {
+const CreateEventPage = () => {
   const { eventData, setEventData } = useEvent();
   const userInputHandler = (e) => {
-    const { name, value } = e.target;
+    const { name, value, files } = e.target;
 
-    setEventData({ ...eventData, [name]: value });
+    setEventData({ ...eventData, [name]: value, files:files });
   };
-
+  
   return (
     <div className="create-event-main">
       <form className="form-container">
         <h1 className="create-event-head">Create Your Event</h1>
-        <label for="event-name"> 🎉Event Name:</label>
+        <label htmlFor="event-name"> 🎉Event Name:</label>
         <input
           id="event-name"
           className="form-field"
@@ -27,7 +27,7 @@ const CreatePage = () => {
           required
         />
 
-        <label for="host-name">🔊 Enter Host Name:</label>
+        <label htmlFor="host-name">🔊 Enter Host Name:</label>
         <input
           id="host-name"
           className="form-field"
@@ -39,7 +39,7 @@ const CreatePage = () => {
           required
         />
 
-        <label for="start"> 🗓️ Start date:</label>
+        <label htmlFor="start"> 🗓️ Start date:</label>
         <input
           id="start"
           className="form-field"
@@ -51,7 +51,7 @@ const CreatePage = () => {
           value={eventData.EVENT_START}
           required
         ></input>
-        <label for="start">👋End date:</label>
+        <label htmlFor="start">👋End date:</label>
         <input
           id="end"
           className="form-field"
@@ -63,7 +63,7 @@ const CreatePage = () => {
           value={eventData.EVENT_END}
           required
         ></input>
-        <label for="Location-name">📍Location Name:</label>
+        <label htmlFor="Location-name">📍Location Name:</label>
         <input
           id="Location-name"
           className="form-field"
@@ -74,7 +74,7 @@ const CreatePage = () => {
           value={eventData.LOCATION_NAME}
           required
         />
-        <label for="PROFILE_IMG">🤳Choose a profile picture:</label>
+        <label htmlFor="PROFILE_IMG">🤳Choose a profile picture:</label>
 
         <input
           id="PROFILE_IMG"
@@ -97,4 +97,4 @@ const CreatePage = () => {
   );
 };
 
-export { CreatePage };
+export { CreateEventPage };

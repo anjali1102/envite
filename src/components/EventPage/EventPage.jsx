@@ -33,7 +33,11 @@ const EventPage = () => {
         </div>
 
         <div className="eventpage-image-container">
-          <img src={EventImage} alt="created_event_image" />
+          <img
+            src={EventImage}
+            alt="created_event_image"
+            id="display_profile_image"
+          />
         </div>
       </div>
     </div>
