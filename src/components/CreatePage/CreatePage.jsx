@@ -1,37 +1,16 @@
 import React, { useState } from "react";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useEvent } from "../../context/event/EventContext";
 import "./CreatePage.css";
 
 const CreatePage = () => {
-  const eventDetails = [
-    {
-      id: 1,
-      EVENT_NAME: "",
-      HOST_NAME: "",
-      EVENT_START: "",
-      EVENT_END: "",
-      LOCATION_NAME: "",
-      PROFILE_IMG: "",
-    },
-  ];
-  const [eventData, setEventData] = useState(eventDetails);
+  const { eventData, setEventData } = useEvent();
   const userInputHandler = (e) => {
-    // console.log(e.target)
-    //here name =EVENT_NAME
     const { name, value } = e.target;
 
     setEventData({ ...eventData, [name]: value });
-    // console.log(eventData);
   };
 
-  // function manageDisableBtn() {
-  //   var bt = document.querySelector(".form-field-btn");
-  //   if (txt.value != "") {
-  //     bt.disabled = false;
-  //   } else {
-  //     bt.disabled = true;
-  //   }
-  // }
   return (
     <div className="create-event-main">
       <form className="form-container">
