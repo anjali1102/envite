@@ -1,0 +1,15 @@
+.eventpage-wrapper {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.eventpage-main {
+  display: flex;
+}
+
+.event-name {
+  color: #240d57;
+}

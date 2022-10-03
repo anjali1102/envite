@@ -1,0 +1,59 @@
+.create-event-main {
+  justify-content: center;
+  display: flex;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 12px;
+}
+
+.create-event-head {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+}
+
+label {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+input {
+  background: #f2f2f2;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+  background: #e9e4e4;
+}
+
+.form-field {
+  text-decoration: none;
+  border: none;
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  font-size: 16px;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-field-btn {
+  background-image: linear-gradient(90deg, #501fc1, #c245d3, #f0567a);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 16px 18px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.form-field-btn:disabled {
+  cursor: default;
+}

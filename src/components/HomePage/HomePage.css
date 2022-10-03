@@ -1,0 +1,14 @@
+.homepage-main {
+  display: flex;
+}
+
+.btn-create-event {
+  background-image: linear-gradient(90deg, #501fc1, #c245d3, #f0567a);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 16px 18px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
